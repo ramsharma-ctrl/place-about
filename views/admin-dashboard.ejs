@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard - Manage Places</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fafafa;
+      text-align: center;
+      padding: 20px;
+    }
+    table {
+      margin: auto;
+      border-collapse: collapse;
+      width: 80%;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+    th {
+      background-color: #2a9d8f;
+      color: white;
+    }
+    a, button {
+      text-decoration: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      color: white;
+    }
+    .edit {
+      background-color: #0077cc;
+    }
+    .delete {
+      background-color: #e63946;
+    }
+    .logout {
+      display: inline-block;
+      margin-bottom: 20px;
+      background-color: #666;
+    }
+    .add {
+      background-color: #2a9d8f;
+    }
+  </style>
+</head>
+<body>
+  <h1>Manage Places</h1>
+  <a href="/logout" class="logout">Logout</a>
+  <a href="/admin/add-form" class="add">+ Add New Place</a>
+  <br><br>
+  <table>
+    <tr>
+      <th>#</th>
+      <th>Place</th>
+      <th>Description</th>
+      <th>Color</th>
+      <th>Actions</th>
+    </tr>
+    <% places.forEach((p, i) => { %>
+    <tr>
+      <td><%= i + 1 %></td>
+      <td><%= p.name %></td>
+      <td><%= p.description %></td>
+      <td style="background-color:<%= p.themeColor %>; color:white;"><%= p.themeColor %></td>
+      <td>
+        <a href="/admin/edit/<%= i %>" class="edit">Edit</a>
+        <a href="/admin/delete/<%= i %>" class="delete" onclick="return confirm('Are you sure you want to delete this place?');">Delete</a>
+      </td>
+    </tr>
+    <% }) %>
+  </table>
+</body>
+</html>

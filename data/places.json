@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Jaipur",
+    "description": "The Pink City of India, known for its rich history and palaces.",
+    "themeColor": "#f4a261"
+  },
+  {
+    "name": "Goa",
+    "description": "A coastal paradise famous for its beaches and nightlife.",
+    "themeColor": "#2a9d8f"
+  },
+  {
+    "name": "Delhi",
+    "description": "Delhi, officially the National Capital Territory (NCT) of Delhi, is a sprawling metropolis in northern India that serves as the nation's capital. It is a city steeped in history, having been built and destroyed multiple times and ruled by various empires, including the Mauryas, Mughals, and British. Today, it is a major political, commercial, and cultural hub that reflects a mix of traditional and modern influences. ",
+    "themeColor": "#8dc526",
+    "image": "/uploads/1762944954559-Delhi.jpg"
+  }
+]

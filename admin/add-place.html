@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add New Place</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 30px;
+      text-align: center;
+    }
+    form {
+      background: white;
+      padding: 20px;
+      width: 400px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    input, textarea, button {
+      width: 90%;
+      margin: 10px 0;
+      padding: 8px;
+    }
+    button {
+      background-color: #2a9d8f;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Add New Place</h1>
+  <form action="/admin/add" method="POST" enctype="multipart/form-data">
+    <input type="text" name="name" placeholder="Place Name" required><br>
+    <textarea name="description" placeholder="Description" required></textarea><br>
+    <input type="color" name="themeColor" required><br>
+    <input type="file" name="image" accept="image/*" required><br>
+    <button type="submit">Add Place</button>
+  </form>
+  <br><a href="/admin/dashboard">Back to Dashboard</a>
+</body>
+</html>
